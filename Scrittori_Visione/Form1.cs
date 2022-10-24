@@ -33,41 +33,46 @@ namespace Scrittori_Visione
 
         private void scrivi_Click()
         {
-            FontStyle f;
-            //riferimento al testo selezionato
-            font = richTextBox1.SelectionFont;
-            if (font != null)
+            if (textBox_Nick.Text != "" && comboBox_Colore.Text != "" && textBox1.Text != "")
             {
-                f = font.Style;
-                //controllo stili selezionati
-                if (checkBox_grassetto.Checked)
-                    f ^= FontStyle.Bold;
-                if (checkBox_corsivo.Checked)
-                    f ^= FontStyle.Italic;
-                if (checkBox_sottolineato.Checked)
-                    f ^= FontStyle.Underline;
-                //setta lo stile del font
-                richTextBox1.SelectionFont = new Font(font, f);
-            }
-            //setta il colore
-            if (comboBox_Colore.Text == "Rosso")
-            {
-                richTextBox1.SelectionColor = Color.Red;
-            }
-            if (comboBox_Colore.Text == "Verde")
-            {
-                richTextBox1.SelectionColor = Color.Green;
-            }
-            if (comboBox_Colore.Text == "Blu")
-            {
-                richTextBox1.SelectionColor = Color.Blue;
-            }
-            //aggiunge il testo applicando stile e colore
-            richTextBox1.AppendText(textBox1.Text + "\n");
+                Nickname = textBox_Nick.Text;
+                FontStyle f;
+                //riferimento al testo selezionato
+                font = richTextBox1.SelectionFont;
+                if (font != null)
+                {
+                    f = font.Style;
+                    //controllo stili selezionati
+                    if (checkBox_grassetto.Checked)
+                        f ^= FontStyle.Bold;
+                    if (checkBox_corsivo.Checked)
+                        f ^= FontStyle.Italic;
+                    if (checkBox_sottolineato.Checked)
+                        f ^= FontStyle.Underline;
+                    //setta lo stile del font
+                    richTextBox1.SelectionFont = new Font(font, f);
+                }
+                //setta il colore
+                if (comboBox_Colore.Text == "ROSSO")
+                {
+                    richTextBox1.SelectionColor = Color.Red;
+                }
+                if (comboBox_Colore.Text == "VERDE")
+                {
+                    richTextBox1.SelectionColor = Color.Green;
+                }
+                if (comboBox_Colore.Text == "BLU")
+                {
+                    richTextBox1.SelectionColor = Color.Blue;
+                }
+                text = textBox1.Text;
 
-            text = textBox1.Text;
+                //aggiunge il testo applicando stile e colore
+                richTextBox1.AppendText(Nickname + ": " + textBox1.Text + "\n");
+            }
+            else 
+            MessageBox.Show("Compilare tutti i campi");
 
-            richTextBox1.Text=(text);
         }
 
 
