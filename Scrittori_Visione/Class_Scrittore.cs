@@ -8,7 +8,7 @@ namespace Scrittori_Visione
 {
     internal class Class_Scrittore
     {
-        string _nome;
+
         string _colore;
         int _stile; //1- grassetto 2-corsivo  3-sottolineato
         string _nickname;
@@ -18,7 +18,7 @@ namespace Scrittori_Visione
 
         public Class_Scrittore(string nome, string colore, int stile, string nickname)
         {
-            _nome = nome;
+
             _colore = colore;   
             _stile = stile; 
             _nickname = nickname;
@@ -26,18 +26,7 @@ namespace Scrittori_Visione
         }
 
 
-        private string Nome
-        {
-            get
-            {
-                return _nome;
-            }
-            set
-            {
-                _nome = value;  
-            }
 
-        }
         private string Colore
         {
             get
