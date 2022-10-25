@@ -12,7 +12,7 @@ namespace Scrittori_Visione
         string _colore;
         int _stile; //1- grassetto 2-corsivo  3-sottolineato
         string _nickname;
-
+        private Class_Visualizzatore visualizzatore;
 
 
 
@@ -24,6 +24,11 @@ namespace Scrittori_Visione
             _nickname = nickname;
 
         }
+        public Class_Scrittore(Class_Visualizzatore ilvisualizzatore)
+        {
+            visualizzatore = ilvisualizzatore;
+        }
+            
 
 
 

@@ -8,8 +8,25 @@ namespace Scrittori_Visione
 {
     internal class Class_Visualizzatore
     {
-        Class_Scrittore Scrittore;
+   
+        private string text;
 
+        public string Testo
+        {
+            set
+            {
+                text = value;
+            }
+            get
+            {
+                return text;
+            }
+        }
+
+        public void Aggiugni(string iltext)
+        {
+            text += iltext;
+        }
 
 
 

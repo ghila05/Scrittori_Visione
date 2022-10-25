@@ -18,10 +18,15 @@ namespace Scrittori_Visione
         string Colore;
         string text;
         private Font font;
+
+        private Class_Scrittore src;
+        private Class_Visualizzatore vis;
+
+       
         public Form1()
         {
             InitializeComponent();
-
+           
             
         }
 
@@ -33,9 +38,12 @@ namespace Scrittori_Visione
 
         private void scrivi_Click()
         {
+            
+
             if (textBox_Nick.Text != "" && comboBox_Colore.Text != "" && textBox1.Text != "")
             {
                 Nickname = textBox_Nick.Text;
+                
                 FontStyle f;
                 //riferimento al testo selezionato
                 font = richTextBox1.SelectionFont;
@@ -89,7 +97,7 @@ namespace Scrittori_Visione
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+          
         }
 
         private void label2_Click(object sender, EventArgs e)
