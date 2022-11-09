@@ -49,7 +49,7 @@
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(309, 31);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(479, 389);
             this.richTextBox1.TabIndex = 0;
@@ -59,11 +59,12 @@
             // textBox_Nick
             // 
             this.textBox_Nick.Location = new System.Drawing.Point(29, 82);
-            this.textBox_Nick.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_Nick.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_Nick.Multiline = true;
             this.textBox_Nick.Name = "textBox_Nick";
             this.textBox_Nick.Size = new System.Drawing.Size(172, 25);
             this.textBox_Nick.TabIndex = 1;
+            this.textBox_Nick.TextChanged += new System.EventHandler(this.textBox_Nick_TextChanged);
             // 
             // label1
             // 
@@ -96,7 +97,7 @@
             "VERDE",
             "BLU"});
             this.comboBox_Colore.Location = new System.Drawing.Point(29, 283);
-            this.comboBox_Colore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_Colore.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_Colore.Name = "comboBox_Colore";
             this.comboBox_Colore.Size = new System.Drawing.Size(160, 24);
             this.comboBox_Colore.TabIndex = 4;
@@ -146,7 +147,7 @@
             // 
             this.checkBox_grassetto.AutoSize = true;
             this.checkBox_grassetto.Location = new System.Drawing.Point(31, 159);
-            this.checkBox_grassetto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_grassetto.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_grassetto.Name = "checkBox_grassetto";
             this.checkBox_grassetto.Size = new System.Drawing.Size(92, 21);
             this.checkBox_grassetto.TabIndex = 11;
@@ -157,7 +158,7 @@
             // 
             this.checkBox_corsivo.AutoSize = true;
             this.checkBox_corsivo.Location = new System.Drawing.Point(29, 187);
-            this.checkBox_corsivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_corsivo.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_corsivo.Name = "checkBox_corsivo";
             this.checkBox_corsivo.Size = new System.Drawing.Size(77, 21);
             this.checkBox_corsivo.TabIndex = 12;
@@ -168,7 +169,7 @@
             // 
             this.checkBox_sottolineato.AutoSize = true;
             this.checkBox_sottolineato.Location = new System.Drawing.Point(29, 215);
-            this.checkBox_sottolineato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_sottolineato.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox_sottolineato.Name = "checkBox_sottolineato";
             this.checkBox_sottolineato.Size = new System.Drawing.Size(105, 21);
             this.checkBox_sottolineato.TabIndex = 13;
@@ -178,7 +179,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(29, 358);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(160, 62);
@@ -197,7 +198,7 @@
             // butn_aggiungi
             // 
             this.butn_aggiungi.Location = new System.Drawing.Point(29, 457);
-            this.butn_aggiungi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.butn_aggiungi.Margin = new System.Windows.Forms.Padding(4);
             this.butn_aggiungi.Name = "butn_aggiungi";
             this.butn_aggiungi.Size = new System.Drawing.Size(161, 41);
             this.butn_aggiungi.TabIndex = 16;
@@ -225,7 +226,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_Nick);
             this.Controls.Add(this.richTextBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

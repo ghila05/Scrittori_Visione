@@ -12,6 +12,7 @@ namespace Scrittori_Visione
         string _colore;
         int _stile; //1- grassetto 2-corsivo  3-sottolineato
         string _nickname;
+        string _testo;
         private Class_Visualizzatore visualizzatore;
 
 
@@ -32,7 +33,7 @@ namespace Scrittori_Visione
 
 
 
-        private string Colore
+        public string Colore
         {
             get
             {
@@ -45,7 +46,7 @@ namespace Scrittori_Visione
 
         }
 
-        private int Stile
+        public int Stile
         {
             get
             {
@@ -57,7 +58,7 @@ namespace Scrittori_Visione
             }
 
         }
-        private string Nickname
+        public  string Nickname
         {
             get
             {
@@ -68,6 +69,18 @@ namespace Scrittori_Visione
                 _nickname = value;
             }
 
+        }
+        public string Testo
+        {
+            set
+            {
+                _testo = value;
+            }
+
+            get
+            {
+                return _testo;
+            }
         }
 
 

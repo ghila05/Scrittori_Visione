@@ -13,10 +13,8 @@ namespace Scrittori_Visione
 {
     public partial class Form1 : Form
     {
-        string Nickname;
-        string Font;
-        string Colore;
-        string text;
+ 
+  
         private Font font;
 
         private Class_Scrittore src;
@@ -35,6 +33,10 @@ namespace Scrittori_Visione
             scrivi_Click();
 
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            src = new  Class_Scrittore(vis);
+        }
 
         private void scrivi_Click()
         {
@@ -42,7 +44,7 @@ namespace Scrittori_Visione
 
             if (textBox_Nick.Text != "" && comboBox_Colore.Text != "" && textBox1.Text != "")
             {
-                Nickname = textBox_Nick.Text;
+                src.Nickname = textBox_Nick.Text;
                 
                 FontStyle f;
                 //riferimento al testo selezionato
@@ -73,10 +75,10 @@ namespace Scrittori_Visione
                 {
                     richTextBox1.SelectionColor = Color.Blue;
                 }
-                text = textBox1.Text;
+                src.Testo = textBox1.Text;
 
                 //aggiunge il testo applicando stile e colore
-                richTextBox1.AppendText(Nickname + ": " + textBox1.Text + "\n");
+                richTextBox1.AppendText(src.Nickname + ": " + src.Testo + "\n");
             }
             else 
             MessageBox.Show("Compilare tutti i campi");
@@ -87,18 +89,7 @@ namespace Scrittori_Visione
     
 
 
-
-       
-
-
-
-
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-          
-        }
+ 
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -110,6 +101,9 @@ namespace Scrittori_Visione
 
         }
 
+        private void textBox_Nick_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
