@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms; // libreria per color dialog
+using System.Drawing; // libreria per color dialog
 
 namespace Scrittori_Visione
 {
@@ -14,7 +16,10 @@ namespace Scrittori_Visione
         string _nickname;
         string _testo;
         private Class_Visualizzatore visualizzatore;
-
+        bool g;
+        bool s;
+        Color co;
+        
 
 
         public Class_Scrittore(string nome, string colore, int stile, string nickname)
@@ -30,7 +35,47 @@ namespace Scrittori_Visione
             visualizzatore = ilvisualizzatore;
         }
             
+        public Color colore
+        {
+            get
+            {
+                return colore;
+            }
+            set
+            {
+                visualizzatore.colore = co;
+            }
+        }
+        public bool Grassetto
+        {
+            get
+            {
+                return g;
+            }
+            set
+            {
+                visualizzatore.grassetto = g;
+            }
 
+        }
+
+        public bool Sottolineato
+        {
+            get
+            {
+                return s;
+            }
+            set
+            {
+                visualizzatore.sottolineato = s;
+            }
+
+        }
+
+        public void AggiungiText(string testo)
+        {
+            visualizzatore.Aggiugni(testo);
+        }
 
 
         public string Colore
