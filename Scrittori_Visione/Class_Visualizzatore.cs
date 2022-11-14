@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scrittori_Visione
 {
-    internal class Class_Visualizzatore
+    public class Class_Visualizzatore
     {
    
         private string text;

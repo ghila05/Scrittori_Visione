@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scrittori_Visione
 {
-    internal class Class_Scrittore
+    public class Class_Scrittore
     {
 
         string _colore;
